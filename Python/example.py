@@ -3,7 +3,9 @@ from planetmint_driver.crypto import generate_keypair
 from ipld import marshal, multihash
 
 plntmnt = Planetmint('https://test.ipdb.io')
+
 alice = generate_keypair()
+
 tx = plntmnt.transactions.prepare(
     operation='CREATE',
     signers=alice.public_key,
@@ -13,5 +15,8 @@ tx = plntmnt.transactions.prepare(
             }   
     ]
 )
+
 signed_tx = plntmnt.transactions.fulfill(tx, private_keys=alice.private_key)
+
+print(alice)
 print(plntmnt.transactions.send_commit(signed_tx))
