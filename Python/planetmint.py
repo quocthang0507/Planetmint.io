@@ -10,7 +10,8 @@ tx = plntmnt.transactions.prepare(
     operation='CREATE',
     signers=alice.public_key,
     assets=[
-        {'data': 
+        {
+          'data': 
             multihash(marshal({'message': 'Blockchain all the things!'}))
             }   
     ]

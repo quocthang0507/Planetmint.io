@@ -124,6 +124,8 @@ celerybeat.pid
 .venv
 env/
 venv/
+venv_bigchaindb/
+venv_planetmint/
 ENV/
 env.bak/
 venv.bak/
