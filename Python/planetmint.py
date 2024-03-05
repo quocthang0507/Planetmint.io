@@ -15,7 +15,7 @@ alice = utils.load_keypair()
 
 plain_body = {
     'name': 'Planetmint.io',
-            'desc': 'Blockchain all the things!'
+    'desc': 'Blockchain all the things!'
 }
 
 asset2 = [
@@ -31,7 +31,5 @@ tx = plntmnt.transactions.prepare(
 )
 
 signed_tx = plntmnt.transactions.fulfill(tx, private_keys=alice.private_key)
-
-print(signed_tx)
 
 print(plntmnt.transactions.send_commit(signed_tx))
