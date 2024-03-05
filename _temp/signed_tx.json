@@ -1,0 +1,35 @@
+{
+  "inputs": [
+    {
+      "owners_before": [
+        "8VGU1TrD3jeiy27cHRdrCPhj2LxaDnaAzAx3QfmPPZ5y"
+      ],
+      "fulfills": None,
+      "fulfillment": "pGSAIG8_jubd-l4ycfUhSzNgxjHKST_stgy9Pqq_M6Yn187wgUD2Jsf0X_GptLA30-__BVGqobcvKd45-nKxBz_frZHNyINShYZ-357YlalChWgGhtQErmGRF71E2z1nXROARaEI"
+    }
+  ],
+  "outputs": [
+    {
+      "public_keys": [
+        "8VGU1TrD3jeiy27cHRdrCPhj2LxaDnaAzAx3QfmPPZ5y"
+      ],
+      "condition": {
+        "details": {
+          "type": "ed25519-sha-256",
+          "public_key": "8VGU1TrD3jeiy27cHRdrCPhj2LxaDnaAzAx3QfmPPZ5y"
+        },
+        "uri": "ni:///sha-256;BABndV-JE81kgvLW6V793mwGGuswNdRYNUK4edvWcqM?fpt=ed25519-sha-256&cost=131072"
+      },
+      "amount": "1"
+    }
+  ],
+  "operation": "CREATE",
+  "metadata": None,
+  "assets": [
+    {
+      "data": "QmcLKBv4qxnGWnFkDcRFBHtbggvZjCgs76BrWKc2Mdynmm"
+    }
+  ],
+  "version": "3.0",
+  "id": "44bebf085deb4391884d3a09b68b71e3bf4244a5e4a827f46902623e2a3413dd"
+}

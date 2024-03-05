@@ -11,28 +11,27 @@ def new_keypair():
     utils.save_keypair(alice)
 
 
-def load_keypair():
-    alice = utils.load_keypair()
-    print(alice)
+alice = utils.load_keypair()
 
+plain_body = {
+    'name': 'Planetmint.io',
+            'desc': 'Blockchain all the things!'
+}
 
-alice = load_keypair()
+asset2 = [
+    {
+        'data': multihash(marshal(plain_body))
+    }
+]
 
-# asset = [
-#     {
-#         'data':
-#         multihash(marshal({'message': 'Blockchain all the things!'}))
-#     }
-# ]
+tx = plntmnt.transactions.prepare(
+    operation='CREATE',
+    signers=alice.public_key,
+    assets=asset2
+)
 
-# print(asset)
+signed_tx = plntmnt.transactions.fulfill(tx, private_keys=alice.private_key)
 
-# tx = plntmnt.transactions.prepare(
-#     operation='CREATE',
-#     signers=alice.public_key,
-#     assets=asset
-# )
+print(signed_tx)
 
-# signed_tx = plntmnt.transactions.fulfill(tx, private_keys=alice.private_key)
-
-# print(plntmnt.transactions.send_commit(signed_tx))
+print(plntmnt.transactions.send_commit(signed_tx))
